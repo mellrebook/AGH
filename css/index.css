@@ -91,10 +91,25 @@ h1 {
     display:none;
 }
 
-#page3{
+.ui-page{
+    background-color: rgba(185, 185, 185, 1);
     text-align: center;
 }
 
 .note_controls{
     width:60px;
+}
+
+#content{
+    width: 94%;
+    margin-left: 3%;
+}
+
+#rec-btn{
+    width: 75px !important;
+    height: 75px !important;
+    border-radius: 50% !important;
+    background-color: rgba(195, 5, 5, 1);
+    margin: 0 auto;
+    margin-top: 10px;
 }

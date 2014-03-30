@@ -4,11 +4,12 @@
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-low" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
     <script src="js/index.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>Notatki Głosowe</title>
 </head>
 <body>
@@ -39,12 +40,14 @@
             <h1>Rec Note</h1>
         </div>
         <div id="content">
-            <img src="img/rec.png" onclick="startRecording()" id="rec" style="width:100px;">
+            
+            <a data-role="button" id="rec-btn" onclick="startRecording()" id="rec"></a>
+            
             <p id="rec-time">Time: 00:00:00</p>
             <img src="img/pause.png" id="pause" class="note_controls">
             <img src="img/play.png" id="play" class="note_controls">
                 <label for="file_name">File Name:</label>
-                <input type="text" name="file_name" value="lekasz" id="file_name" value="">
+                <input type="text" name="file_name" value="New Name" id="file_name" value="">
             <a href="#page1" class="ui-btn ui-icon-check ui-btn-icon-right">Save</a>
         </div>
     </div>
