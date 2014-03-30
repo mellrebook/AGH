@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, 
+        maximum-scale=1, minimum-scale=1, width=device-width, 
+        height=device-height, target-densitydpi=device-dpi" />
+    <!-- jquery-->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <script src="action.js"></script>
+    <title>MPK TRANS</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script>
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+
+
+        }
+
+    </script>
+</head>
+<body>
+    <div data-role="page" id="page1">
+        <div data-role="header">
+            <h1>MPK TRANS</h1>
+            <a href="#" data-icon="gear" class="ui-btn-right">SETTINGS</a>
+        </div>
+        <div data-role="content" class="content">
+            <a href="#page2" data-role="button" data-theme="a">Wybór Trasy</a>
+            <a href="#" data-role="button" data-theme="a">Definiuj Trasę</a>
+            <a href="#" data-role="button" data-theme="a">Edytuj Trasę</a>
+        </div>
+    </div>
+    <!-- STRONA DRUGA-->
+    <div data-role="page" id="page2">
+        <div data-role="header">
+            <h1>MPK TRANS</h1>
+            <a href="#" data-icon="gear" class="ui-btn-right">SETTINGS</a>
+        </div>
+        <div data-role="content" class="content">
+            <div style="width: 45%; display: block; float: left; text-align: center;">
+                <p>Skad</p>
+                <input type="text" name="whence" id="whence" value="" />
+            </div>
+            <div style="width: 10%; display: block; float: left;">
+                <img src="image/arrow.png" />
+            </div>
+            <div style="width: 45%; display: block; float: left; text-align: center;">
+                <p>Dokad</p>
+                <input type="text" name="where" id="where" value="" />
+            </div>
+            <div data-role="fieldcontain" style="border-top: 1px solid black; padding-top: 30px;">
+                <label for="line-number">Numer lini:</label>
+                <input type="number" name="line-number" id="line-number" value="" />
+                <a href="#page3" type="button" style="margin-top: 30px;">Dodaj Trase</a>
+            </div>
+        </div>
+    </div>
+    <!-- STRONA TRZECIA-->
+    <div data-role="page" id="page3">
+        <div data-role="header">
+            <a href="#page1" data-icon="home">Home</a>
+            <h1>MPK TRANS</h1>
+            <a href="#" data-icon="gear" class="ui-btn-right">SETTINGS</a>
+        </div>
+        <div data-role="content" class="content">
+            <button id="add-stop">Dodaj przystanek</button>
+            <ul id="route-list">
+                <li><p>Dh wanda</p></li>
+                <li><p>Stradom</p></li>
+            </ul>
+            <a href="#" id="tick" type="button">Zakończ</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+</body>
+</html>
