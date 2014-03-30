@@ -68,16 +68,31 @@ function errorSound(e){
 
 
 function recordSound(){
-    console.log("zaczynam nagryac.");
+    mSekInt = setInterval(function() {
+        mSek++;
+        if(mSek >= 100)
+            mSek = 0;
+        console.log(mSek);
+        $("#rec-time").text("Time: "+min+":"+sek+":"+mSek);
+    }, 10);
+    //
+    sekInt = setInterval(function() {
+        sek++;
+        if(sek >= 60)
+            sek = 0;
+        console.log(sek);
+    }, 1000);
+    //
+    minInt = setInterval(function() {
+        min++;
+        console.log(min);
+    }, 1000*60);
+
+
     currentDir.getFile(newNoteName, {create: true}, function() {
-        console.log('created wav file:' + recordPath);
-        console.log("Initializing audio..." + recordPath + "tu jest rekordpath");
-        navigator.audio = new Media(currentDir + "/" + newNoteName, recording_success, recording_failure);
-        console.log("Initializing audio...OK");
-        console.log("Starting recording...");
+        navigator.audio = new Media(currentDir.fullPath + "/" + newNoteName, recording_success, recording_failure);
         navigator.audio.startRecord();
-        console.log("Starting recording...OK");
-    }, logError);
+    }, logError);    
 }
 //nagralo sie
 function recording_success() {
@@ -91,13 +106,17 @@ function recording_failure(error) {
 
 //stop nagrywania
 function stopRecord() {
+    window.clearInterval(sekInt);
+    window.clearInterval(minInt);
+    window.clearInterval(mSekInt);
+
     navigator.audio.stopRecord();
     recording = false;
 }
 
 //error
 function logError(error) {
-   console.log('something failed: ' + JSON.stringify(error));
+    console.log('something failed: ' + JSON.stringify(error));
 }
 
 jQuery(document).ready(function($) {
@@ -106,4 +125,7 @@ jQuery(document).ready(function($) {
     recording = false;
     recordPath = "";
     currentDir = "";
+    mSek = 0;
+    sek = 0;
+    min = 0;
 });
