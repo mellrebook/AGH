@@ -1,0 +1,24 @@
+Intel HAXM - sterownik do emulatora dla procesorów Intel, pozwala na poprawienie wydajnoœci emulatora
+
+http://software.intel.com/en-us/articles/intel-hardware-accelerated-execution-manager-end-user-license-agreement-windows/
+http://software.intel.com/en-us/articles/speeding-up-the-android-emulator-on-intel-architecture
+
+Java jdk7
+
+http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
+
+Java jre7
+
+http://www.oracle.com/technetwork/java/javase/downloads/java-se-jre-7-download-432155.html
+
+Android studio (nasz folder ECLIPSE)
+
+http://developer.android.com/sdk/installing/studio.html
+
+PhoneGap (pracowaliœmy na wersji 1.9.0)
+
+http://phonegap.com/install
+
+Alternatywny emulator:
+
+http://www.genymotion.com/
